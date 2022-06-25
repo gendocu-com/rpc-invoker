@@ -1,0 +1,22 @@
+spectype: gendocu
+servers:
+  - selector: "*.GrpcWithoutSSL"
+    envs:
+      - name: "grpc"
+        urls:
+          - grpc://tmp.com
+  - selector: "*.GrpcWithSSL"
+    envs:
+      - name: "grpc"
+        urls:
+          - grpcs://tmp.com
+  - selector: "*.GrpcWebOnly"
+    envs:
+      - name: "env"
+        urls:
+          - grpcwebs://google.com
+  - selector: "*.RestOnly"
+    envs:
+      - name: "env"
+        urls:
+          - rests://google.com
